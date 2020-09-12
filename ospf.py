@@ -27,10 +27,10 @@ def test(task):
         failed_report(dev_name)
 
 def failed_report(dev_name):
-    header = {"Authorization": "Bearer NGVlYWZmMzMtOGJhMC00NDA0LWExN2ItZTZiYzNjOTVlNWEzOTk0ZTMzZDUtNjZj_PF84_consumer",
+    header = {"Authorization": "Bearer xxx",
               "Content-Type": "application/json"}
 
-    data = {"roomId": "Y2lzY29zcGFyazovL3VzL1JPT00vNDVmMjBhNjAtZjUzYS0xMWVhLWExNWMtY2I1MjQ2YjQ4M2Fj",
+    data = {"roomId": "xxx",
             "text": f"{dev_name} FAIL: OSPF NEIGHBOR FAILURE"}
     return requests.post("https://api.ciscospark.com/v1/messages", headers=header, data=json.dumps(data), verify=True)
 
